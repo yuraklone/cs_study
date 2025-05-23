@@ -13,6 +13,9 @@ int result; //何を踏んだかの結果
 //    2:毒 マイナス
 //    3:罠     即死
 
+//地形の種類の名前を格納する配列
+string[] grounds = { "通常", "回復", "毒", "罠" };
+
 int cure = 5; //回復量
 int poison = 5; //ダメージ量
 
@@ -29,7 +32,7 @@ if(result == 1)
     {
         currentHP = 10;
     }
-    Console.WriteLine("回復した！現在のHP:" + currentHP);
+    Console.WriteLine(grounds[result] +"！現在のHP:" + currentHP);
 }
 
 else if (result == 2)
@@ -38,12 +41,12 @@ else if (result == 2)
     if (currentHP < 0)
     {
         currentHP = 0;
-        Console.WriteLine("毒を食らった！現在のHP:" + currentHP);
+        Console.WriteLine(grounds[result] + "！現在のHP:" + currentHP);
         Console.WriteLine("死亡した！");
     }
     else
     {
-        Console.WriteLine("毒を食らった！現在のHP:" + currentHP);
+        Console.WriteLine(grounds[result] + "！現在のHP:" + currentHP);
     }
 
 }
@@ -51,7 +54,7 @@ else if (result == 2)
 else if(result == 3)
 {
     currentHP = 0;
-    Console.WriteLine("罠にかかった！現在のHP:" + currentHP);
+    Console.WriteLine(grounds[result] + "！現在のHP:" + currentHP);
     Console.WriteLine("死亡した！");
 }
 
