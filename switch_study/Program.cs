@@ -11,3 +11,19 @@ Console.WriteLine("最初のHP:" + currentHP);
 Random rand = new Random(); //ランダムな機能を持っているRandomクラスの能力を変数randに実体化
 result = rand.Next(0, 4);　//0以上4未満のランダム値を返す
 
+switch (result)
+{
+    case 1:
+        Console.WriteLine("回復した");
+        break;
+    case 2:
+        Console.WriteLine("毒を踏んだ");
+        break;
+    case 3:
+        Console.WriteLine("罠にかかった");
+        break;
+    default:
+        Console.WriteLine("何も起きなかった");
+        break;
+
+}
