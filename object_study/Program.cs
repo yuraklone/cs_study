@@ -2,17 +2,17 @@
 
 using object_study;
 
-Player hiroshi = new Player();　//クラスのインスタンス化・実体化
-hiroshi.Name("ひろし");
-hiroshi.Attack();
+Player hiroshi = new Player("ひろし");　//クラスのインスタンス化・実体化
+//hiroshi.Name("ひろし");
+hiroshi.Action();
 hiroshi.StatusDisplay();
 
 Player yoshida = new Player();　//クラスのインスタンス化・実体化
 yoshida.Name("よしだ");
-yoshida.Attack();
+yoshida.Action(1);
 yoshida.StatusDisplay();
 
-Player nanjyolno = new Player();　//クラスのインスタンス化・実体化
-nanjyolno.Name("なんじょる");
-nanjyolno.Attack();
-nanjyolno.StatusDisplay();
+Player nanjolno = new Player();　//クラスのインスタンス化・実体化
+nanjolno.Name("なんじょる");
+nanjolno.Action(2);
+nanjolno.StatusDisplay();
