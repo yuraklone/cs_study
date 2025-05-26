@@ -10,8 +10,8 @@ namespace object_study
     internal class Player
     {
         private string name;
-        private int hp;
-        private float attack;
+        protected int hp;
+        protected float attack;
         private float defence;
         private string job;
 
@@ -23,7 +23,7 @@ namespace object_study
 
         public Player(string name)　//引数付きコンストラクタ
         {
-            this.name = "";
+            this.name = name;
             hp = 100;
             attack = 10;
             defence = 10;
@@ -46,12 +46,16 @@ namespace object_study
             }
         }
 
-
-        public void Name(string name)
+        //名前をセット
+        public void NameSet(string name)
         {
-            this.name = name;
+            this.name = name;　//変数nameに引数nameを代入
         }
 
+        public void JobSet(string job)
+        {
+            this.job = job; //変数jobに引数jobを代入
+        }
         public void Action()
         {
             Console.WriteLine("横にかわした！");
@@ -64,18 +68,24 @@ namespace object_study
             else Console.WriteLine("横にかわした！");
         }
 
-        public void Attack() 
-        {
-            Console.WriteLine(attack + "のダメージを与えた");
-        }
+        //public void Attack() 
+        //{
+        //    Console.WriteLine(attack + "のダメージを与えた");
+        //}
 
         public void StatusDisplay()
         {
             Console.WriteLine("NAME:" + name);
             Console.WriteLine("HP:" + hp);
             Console.WriteLine("ATK:" + attack);
-            Console.WriteLine("DEF" + defence);
-            Console.WriteLine("JOB"+job);
+            Console.WriteLine("DEF:" + defence);
+            Console.WriteLine("JOB:"+job);
+        }
+
+        //調必殺技
+        public virtual  void SpecialAttack()
+        {
+            Console.WriteLine("LimitBreak!");
         }
 
     }
